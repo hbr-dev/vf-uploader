@@ -1,0 +1,132 @@
+fieldset {
+    border: .5px solid #ccc;
+}
+/* ################################################# */
+/* ################################################# */
+.remove-all-section {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.remove-all-section .btn {
+    background: none;
+    border: none;
+    font-size: large;
+    color: #878787;
+
+}
+
+.remove-all-section .btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: rotate(360deg);
+    transition: all .5s ease-in-out;
+}
+/* ################################################ */
+.drop-zone {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #878787;
+    border: 1px dashed #ccc;
+    transition: all .5s ease-in-out;
+}
+
+.drop-zone .drag-drop {
+    width: calc(200px);
+    height: calc(250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(218, 218, 218);
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    font-size: x-small;
+    letter-spacing: 2px;
+}
+
+.drop-zone .drop-animation {
+    animation-name: drop-animation1;
+    animation-duration: 4s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop-animation1 {
+    0% {
+        transform: scale(1, 1);
+        background-color: #0d6dfd5c;
+        color: white;
+    }
+    30% {
+        transform: scale(.8, .8);
+        background-color: #0d6dfd9d;
+        color: white;
+    }
+    100% {
+        transform: scale(.8, .8);
+        background-color: #0d6dfd9d;
+        color: white;
+    }
+}
+/* ################################################ */
+.upload-file-section {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    border: 1px solid #878787;
+    padding: 1%;
+}
+
+.upload-file-section input[type="file"] {
+    display: none;
+}
+
+.upload-file-section #file-counter {
+    flex : 80%;
+    margin-right : 1%;
+    margin-left : 1%;
+    font-size: large;
+    padding: 1% 2%;
+    transition: all .5s linear;
+}
+
+.upload-file-section #browse-files {
+    flex: 16%;
+    margin-left: 1%;
+    margin-right : 1%;
+    background-color: #0D6EFD;
+    font-size: large;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1% 2%;
+}
+
+.upload-file-section #browse-files:hover{
+    cursor: pointer;
+    background-color: #0d6dfd9d;
+    transition: all .5s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+    .upload-file-section { 
+        display: flex; 
+        flex-direction: column;
+    }
+    .upload-file-section #file-counter {
+        flex: 100%;
+    }
+    .upload-file-section #browse-files {
+        flex: 100%;
+    }
+}

@@ -1,0 +1,93 @@
+.notification {
+    padding-top: calc(10px);
+    padding-bottom: calc(10px);
+}
+
+.notification.left {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.notification.right {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.notification.center {
+    position: absolute;
+    left : calc(20% - 10px);
+    bottom: 10px;
+    right: calc(20% - 10px);
+}
+
+.notification .error {
+    background-color: #ff030320;
+    padding-top: calc(10px);
+    padding-bottom: calc(10px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    height: calc(fit-content + 10px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #FF0303;
+    animation: zoomIN_OUT 1.5s infinite ease-in-out;
+}
+
+.error img {
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.error h3 {
+    color: #FF0303;
+    margin-left: 5px;
+    margin-right: 2.5px;
+    font-size: clamp(0.4375rem, 0.3214rem + 0.5804vw, 1.25rem); /* min 10px, max 16px */
+}
+
+.error #error-body {
+    margin-left: 7.5px;
+    margin-right: 10px;
+}
+
+.error #error-body p  {
+    color: #FF0303;
+    letter-spacing: 2px;
+    font-size: clamp(0.4375rem, 0.3214rem + 0.5804vw, 1.25rem); /* min 8px, max 16px */
+}
+
+.error button {
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    background: none;
+    color: #FF0303;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.error button:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: transform .3s linear;
+}
+
+@keyframes zoomIN_OUT {
+    0%, 100% {
+        /* transform: scale(1, 1); */
+        background-color: #ff030315;
+    }
+    50% {
+        /* transform: scale(1, 1); */
+        background-color: #ff030335;
+    }
+}

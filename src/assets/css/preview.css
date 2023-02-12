@@ -1,0 +1,115 @@
+.preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview .preview-item {
+    width: calc(200px);
+    height: calc(250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(218, 218, 218);
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.preview .preview-item:hover {
+    cursor: alias;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all .5s ease-in-out;
+}
+
+.preview-item .file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(190px);
+    height: calc(140px);
+    overflow: hidden;
+}
+
+.preview-item .info {
+    width: calc(190px);
+    height: calc(70px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-item .info i {
+    text-align: center;
+    font-size: small;
+}
+
+.preview-item .actions{
+    position: relative;
+    width: calc(190px);
+    height: calc(35px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.preview-item .actions img#okICO {
+    position : absolute;
+    left: 0;
+    border: none;
+    opacity: 0;
+}
+
+.preview-item .actions img#uploadICO {
+    position : absolute;
+    left: 0;
+    border: none;
+    opacity: 1;
+}
+
+.preview-item .actions img {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.preview-item .actions img:hover {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+    transform: scale(.9, .9);
+    transition: transform .25s linear;
+}
+
+.preview-item .actions img#okICO:hover {
+    cursor: wait;
+    background-color: rgba(235, 235, 235, 0);
+    transform: scale(.9, .9);
+    transition: transform .25s linear;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
