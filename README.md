@@ -8,7 +8,7 @@ Vue FileUploader is a versatile Vue.js 3 plugin that simplifies file uploads of 
 - **Drag and Drop:** Users can easily drag files into the upload area for a seamless experience.
 - **Progress Tracking:** Monitor upload progress in real-time, providing users with feedback on their uploads.
 - **File Validation:** Ensure uploaded files meet specific criteria (size, type) before submission.
-- **Virus Scanning:** Integrate with virus scanning services to check files for potential threats before processing.
+- **Virus Scanning:** Integrate with virus scanning services to check files for potential threats before processing: ⏳ In Progress
 - **Customizable Settings:** Tailor the plugin to fit your project’s needs with various configuration options.
 - **Error Handling:** Gracefully handle errors and provide informativer
 
